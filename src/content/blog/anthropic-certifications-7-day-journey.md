@@ -46,7 +46,7 @@ The alternative is the **Scaffolding method**: start with the Level 100 Associat
 When colleagues and friends ask why I spent a week digging so deep into Anthropic's stack, the answer is simple: real-world production never runs on just one model, the same way that large enterprises don't rely on a single cloud provider.
 
 ### 1. Multi-Model Architecture
-Google and Anthropic have a close, multifaceted relationship: Google is an investor in Anthropic, we are cloud infrastructure providers, and we collaborate closely across developer tooling and AI open-source standards. But sitting with enterprise customers tells a very practical story: almost nobody builds an entire enterprise estate on a single vendor's stack. Modern systems are hybrid and multi-model by design.
+Google and Anthropic have a close, multifaceted relationship: Google is an investor in Anthropic, infrastructure providers (Claude providing foundational model infrastructure, and Google providing cloud infrastructure as well as AI models), and we collaborate closely across developer tooling and AI open-source standards. But sitting with enterprise customers tells a very practical story: almost nobody builds an entire enterprise estate on a single vendor's stack. Modern systems are hybrid and multi-model by design.
 
 ### 2. Moving Beyond the False Binary ("Either/Or")
 Whenever a customer asks whether they should scrap their Claude setups for Gemini, or vice versa, my response is always the same: let's not focus on the technology first—focus on your use case needs and business requirements.
