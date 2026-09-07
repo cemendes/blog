@@ -25,10 +25,8 @@ h1 {
   font-size: 2.5rem !important;
   line-height: 1.2 !important;
   letter-spacing: -0.025em !important;
-  margin-top: 1rem !important;
-  margin-bottom: 1.5rem !important;
-  border-bottom: 1px solid #e2e8f0 !important;
-  padding-bottom: 1.5rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 h2 {
@@ -181,4 +179,131 @@ hr {
 
 .ai-editorial-note strong {
   color: #0f172a !important;
+}
+
+/* Blog Header & Byline */
+.blog-header {
+  margin-bottom: 2.5rem !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding-bottom: 2rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.byline {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  margin-top: 1.25rem !important;
+}
+
+.author-info {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: baseline !important;
+  gap: 0.5rem !important;
+}
+
+.author-name {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  font-size: 1.05rem !important;
+}
+
+.author-title {
+  color: #64748b !important;
+  font-size: 0.95rem !important;
+}
+
+.meta-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  font-size: 0.88rem !important;
+  color: #64748b !important;
+  margin-top: 0.75rem !important;
+}
+
+.badge-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  margin-top: 0.85rem !important;
+}
+
+.badge {
+  display: inline-block !important;
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  padding: 3px 10px !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Site Navigation Header */
+.site-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-bottom: 1.25rem !important;
+  margin-bottom: 2rem !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.site-brand {
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  color: #0f172a !important;
+  letter-spacing: -0.01em !important;
+}
+
+.site-nav {
+  display: flex !important;
+  gap: 1.75rem !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+}
+
+.site-nav .nav-item {
+  color: #64748b !important;
+}
+
+.site-nav .nav-item.active {
+  color: #2563eb !important;
+  border-bottom: 2px solid #2563eb !important;
+  padding-bottom: 4px !important;
+}
+
+.site-social {
+  display: flex !important;
+  gap: 0.6rem !important;
+  color: #64748b !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+}
+
+/* Blog Footer */
+.blog-footer {
+  margin-top: 5rem !important;
+  padding: 3rem 0 2rem 0 !important;
+  text-align: center !important;
+  color: #94a3b8 !important;
+  font-size: 0.88rem !important;
+  border-top: 1px solid #f1f5f9 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.blog-footer p {
+  margin-bottom: 0.6rem !important;
+  color: #64748b !important;
+}
+
+.blog-footer .footer-links {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  color: #94a3b8 !important;
 }

@@ -4,7 +4,39 @@ description: "Architecture, exam realities, and enterprise multi-model takeaways
 pubDate: "Sep 06 2026"
 ---
 
+<div class="site-header">
+  <div class="site-brand">Eduardo Oliveira</div>
+  <div class="site-nav">
+    <span class="nav-item">Home</span>
+    <span class="nav-item active">Blog</span>
+    <span class="nav-item">About</span>
+  </div>
+  <div class="site-social">
+    <span>GitHub</span> • <span>Credly</span>
+  </div>
+</div>
+
 # How I Passed All 4 Anthropic Claude Certifications in 7 Days
+
+<div class="blog-header">
+  <div class="author-info">
+    <span class="author-name">Eduardo Oliveira</span>
+    <span class="author-title">— Senior Customer Engineer @ Google Cloud</span>
+  </div>
+  <div class="meta-row">
+    <span>Sep 6, 2026</span>
+    <span>•</span>
+    <span>8 min read</span>
+    <span>•</span>
+    <span class="badge-ai" title="Human-authored, AI-edited">✍️ Human-authored • AI-edited</span>
+  </div>
+  <div class="badge-list">
+    <span class="badge">Enterprise AI</span>
+    <span class="badge">Anthropic</span>
+    <span class="badge">Google Cloud</span>
+    <span class="badge">Architecture</span>
+  </div>
+</div>
 
 ## 1. The 7-Day Sprint
 
@@ -153,3 +185,16 @@ To help engineers prepare with practical, code-grounded materials, I open-source
     [View Credly Badge](https://www.credly.com/badges/c73bbf9f-71e2-4403-93f9-51babe651b4a) *(Issued August 29, 2026)*
 
 Certifications don’t make you an architect—shipping production systems and debugging them when they break does. But doing the groundwork gives you the mental precision to design AI systems that don't fall apart at 2 AM.
+
+<aside class="ai-editorial-note">
+  <p>
+    <strong>Transparency Note:</strong> The ideas, technical analysis, and exam experiences shared here are entirely my own. I use AI as an editorial sounding board to polish prose, catch typos, and refine readability, but all content is human-conceived and verified.
+  </p>
+</aside>
+
+<footer class="blog-footer">
+  <p>© 2026 Eduardo Oliveira. All rights reserved.</p>
+  <div class="footer-links">
+    <span>GitHub</span> • <span>Credly</span> • <span>RSS</span>
+  </div>
+</footer>
