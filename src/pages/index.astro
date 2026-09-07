@@ -1,0 +1,43 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>👋 Hello, I'm Eduardo Oliveira</h1>
+			<p>
+				I am a <strong>Senior Customer Engineer at Google Cloud</strong> based in Austin, Texas.
+				I specialize in enterprise Generative AI architecture, multi-model orchestration (Gemini, Vertex AI, Claude, and Model Context Protocol), and autonomous agent systems.
+			</p>
+			<p>
+				Outside of work, I run a sophisticated multi-node homelab environment automating my family's digital life and infrastructure workflows.
+				I write about real-world AI engineering, architectural trade-offs, certification deep dives, and production lessons.
+			</p>
+			<hr />
+			<h2>Latest Articles</h2>
+			<p>
+				Explore in-depth technical breakdowns and field notes:
+			</p>
+			<ul>
+				<li>
+					<a href="/blog/anthropic-certifications-7-day-journey/">
+						<strong>How I Passed All 4 Anthropic Claude Certifications in 7 Days</strong>
+					</a> — <em>Architecture, Exam Realities, and Enterprise Takeaways</em>
+				</li>
+			</ul>
+			<p>
+				👉 Browse all posts in the <a href="/blog">Blog Archive</a>, or read more <a href="/about">About Me</a>.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

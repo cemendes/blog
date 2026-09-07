@@ -1,0 +1,36 @@
+---
+import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+	title="About Eduardo Oliveira"
+	description="Senior Customer Engineer at Google Cloud, AI Architect, and Homelab Tinkerer."
+	pubDate={new Date('September 06 2026')}
+	heroImage={AboutHeroImage}
+>
+	<p>
+		I am a <strong>Senior Customer Engineer at Google Cloud</strong> based in Austin, Texas.
+		My professional focus centers on enterprise artificial intelligence, modern application architecture, and multi-model agentic workflows.
+	</p>
+
+	<h2>Enterprise AI & Multi-Model Architecture</h2>
+	<p>
+		In enterprise computing, no single model solves every business challenge. I work daily with Fortune 500 customers to design and build production AI systems that balance:
+	</p>
+	<ul>
+		<li><strong>Latency & Throughput</strong>: Choosing the right model tier for real-time customer interactions.</li>
+		<li><strong>Cost & Token Economics</strong>: Leveraging prompt caching, prefix optimization, and compact system designs.</li>
+		<li><strong>Modality & Context Fit</strong>: Harnessing Google's massive context windows and multimodal Gemini models alongside specialized tool-calling models like Claude over Model Context Protocol (MCP).</li>
+	</ul>
+
+	<h2>Homelab & Production Engineering</h2>
+	<p>
+		I strongly believe that the best architects are active builders. Outside of client advisory, I maintain an enterprise-grade multi-host homelab (running Proxmox VE, OPNsense firewalls, TrueNAS, Home Assistant, and autonomous agent supervisors) where I test new architectures, protocol standards, and automation pipelines under real operational conditions.
+	</p>
+
+	<h2>Connect</h2>
+	<p>
+		You can find my open-source projects on <a href="https://github.com/cemendes" target="_blank" rel="noreferrer">GitHub</a>, verified credentials on <a href="https://www.credly.com/users/carlos-oliveira.7e7371ae/badges" target="_blank" rel="noreferrer">Credly</a>, or subscribe via <a href="/rss.xml">RSS</a>.
+	</p>
+</Layout>
