@@ -61,7 +61,12 @@ Here is the breakdown of costs, delivery formats, and the practical test-day che
 
 ### Vouchers vs. Retail Pricing
 * **Partner Network ($0)**: If your organization is a member of the Claude Partner Network, vouchers cost **\$0**. Qualifying as a **Registered Partner** has a remarkably accessible threshold—you don't need dozens of certified consultants or multi-million-dollar commitments; you just need to be actively building, evaluating, or consulting with Claude tools. Apply via the [Anthropic Partner Network Portal](https://www.anthropic.com/partners) using your corporate email.
-* **Direct Retail ($125 USD)**: If your employer isn't in the partner network or you are an independent builder, you can register and pay out-of-pocket directly through Pearson VUE at the standard rate of **\$125 USD** per exam.
+* **Direct Retail Pricing (Tiered by Level)**: If your employer isn't in the partner network or you are an independent builder, you can register and pay out-of-pocket directly through Pearson VUE. Retail pricing is tiered based on the credential level:
+  * **Associate (CCAO-F)**: **\$99 USD**
+  * **Developer (CCDV-F)**: **\$125 USD**
+  * **Architect Foundations (CCAR-F)**: **\$125 USD**
+  * **Architect Professional (CCAR-P)**: **\$175 USD**
+  *(Sitting for all four at retail totals **\$524 USD**).*
 
 ### Delivery Formats: Remote OnVUE vs. Test Centers
 Anthropic supports both delivery formats: **Online Proctored (Pearson OnVUE)** from your home or office, and **In-Person Test Centers**.
@@ -97,10 +102,10 @@ Every exam has a distinct focus, pacing profile, and target persona:
 
 | Exam Track | Level (1-4) | Questions | Passing Score | Retail Fee | Time Allowed | Time Used | Pacing Feel |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. CCAO-F Associate** | 100 | 60 Questions | 720 / 1000 | $125 ($0 Partner) | 120 Minutes | ~60 Minutes | Relaxed |
+| **1. CCAO-F Associate** | 100 | 60 Questions | 720 / 1000 | $99 ($0 Partner) | 120 Minutes | ~60 Minutes | Relaxed |
 | **2. CCDV-F Developer** | 250–300 | 53 Questions | 720 / 1000 | $125 ($0 Partner) | 120 Minutes | ~90 Minutes | Moderate |
 | **3. CCAR-F Arch Fnd** | 200 | 60 Questions | 720 / 1000 | $125 ($0 Partner) | 120 Minutes | ~118 Minutes | Tight |
-| **4. CCAR-P Arch Prof** | 400 | 63 Questions | 720 / 1000 | $125 ($0 Partner) | 120 Minutes | ~104 Minutes | Tight |
+| **4. CCAR-P Arch Prof** | 400 | 63 Questions | 720 / 1000 | $175 ($0 Partner) | 120 Minutes | ~104 Minutes | Tight |
 
 > **Note on Technical Levels**: I use the standard [academic and technical course leveling taxonomy (100–400 levels)](https://study.com/college/credit-transfer/college-course-levels-explained-100-200-300-400-levels.html).
 
