@@ -180,7 +180,7 @@ I finished my initial pass with 16 minutes left, but had 28 questions flagged. T
 
 ---
 
-## 5. Four Key Learnings from Studying, Sitting for the Exams, and Working with AI
+## 5. Four Key Learnings from Studying, Sitting for the Exams, and Working with Agentic AI
 
 1. **Start Deterministic Before Going Autonomous**  
    Autonomous multi-agent loops sound thrilling in conference demos. In production, unconstrained agent swarms without cycle limits and recursion guardrails are operational nightmares. Most enterprise workloads run faster, cost less, and fail far less often using clean **Prompt Chaining** or **Routing** behind deterministic validation gates.
