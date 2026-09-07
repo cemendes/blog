@@ -93,6 +93,34 @@ const { title, description, pubDate, updatedDate, heroImage, draft, slug } = Ast
 				color: #b45309;
 				border: 1px solid #fcd34d;
 			}
+			.badge-ai {
+				background: #f0fdf4;
+				color: #166534;
+				border: 1px solid #bbf7d0;
+				font-size: 0.75rem;
+				font-weight: 600;
+				padding: 2px 8px;
+				border-radius: 9999px;
+				display: inline-flex;
+				align-items: center;
+				gap: 4px;
+			}
+			.ai-editorial-note {
+				margin-top: 3.5rem;
+				padding: 1.25rem 1.5rem;
+				background-color: #f8fafc;
+				border-left: 3px solid #cbd5e1;
+				border-radius: 0 8px 8px 0;
+				font-size: 0.9rem;
+				line-height: 1.6;
+				color: #475569;
+			}
+			.ai-editorial-note p {
+				margin: 0;
+			}
+			.ai-editorial-note strong {
+				color: #0f172a;
+			}
 			/* Dev-only floating editor trigger */
 			.dev-edit-bar {
 				position: fixed;
@@ -166,6 +194,8 @@ const { title, description, pubDate, updatedDate, heroImage, draft, slug } = Ast
 										</>
 									)
 								}
+								<span>•</span>
+								<span class="badge-ai" title="Human-authored, AI-edited">✍️ Human-authored • AI-edited</span>
 							</div>
 							<div class="badge-list">
 								<span class="badge">Enterprise AI</span>
@@ -176,6 +206,11 @@ const { title, description, pubDate, updatedDate, heroImage, draft, slug } = Ast
 						</div>
 					</div>
 					<slot />
+					<aside class="ai-editorial-note">
+						<p>
+							<strong>Transparency Note:</strong> The ideas, technical analysis, and exam experiences shared here are entirely my own. I use AI as an editorial sounding board to polish prose, catch typos, and refine readability, but all content is human-conceived and verified.
+						</p>
+					</aside>
 				</div>
 			</article>
 		</main>

@@ -220,10 +220,53 @@ export function astroLiveEditor(): AstroIntegration {
 			return { frontmatter: '', body: text };
 		}
 
+		function parseFrontmatter(fmText) {
+			const data = {};
+			const titleMatch = fmText.match(/title:\\s*["']?([^"'\\n]+)["']?/i);
+			if (titleMatch) data.title = titleMatch[1];
+			const descMatch = fmText.match(/description:\\s*["']?([^"'\\n]+)["']?/i);
+			if (descMatch) data.description = descMatch[1];
+			const dateMatch = fmText.match(/pubDate:\\s*["']?([^"'\\n]+)["']?/i);
+			if (dateMatch) data.pubDate = dateMatch[1];
+			data.draft = /draft:\\s*true/i.test(fmText);
+			return data;
+		}
+
 		function updatePreview() {
-			const { body } = extractParts(rawEditor.value);
+			const { frontmatter, body } = extractParts(rawEditor.value);
+			const meta = parseFrontmatter(frontmatter);
+			
+			let headerHtml = '';
+			if (meta.title) {
+				headerHtml = \`
+				<div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 1.5rem; margin-bottom: 2rem;">
+					<h1 style="margin: 0 0 1rem 0; font-size: 2.5rem; line-height: 1.25; color: #0f172a; font-weight: 800; letter-spacing: -0.02em;">
+						\${meta.title}
+					</h1>
+					<div style="display: flex; flex-direction: column; gap: 0.5rem;">
+						<div style="font-size: 1rem; color: #0f172a;">
+							<strong>Eduardo Oliveira</strong> <span style="color: #64748b;">— Senior Customer Engineer @ Google Cloud</span>
+						</div>
+						<div style="display: flex; gap: 0.6rem; font-size: 0.88rem; color: #64748b; align-items: center;">
+							<span>\${meta.pubDate || 'Recent'}</span>
+							<span>•</span>
+							<span>8 min read</span>
+							\${meta.draft ? '<span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; border: 1px solid #fcd34d;">Draft</span>' : ''}
+						</div>
+						<div style="display: flex; gap: 0.4rem; margin-top: 0.25rem;">
+							<span style="background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600;">Enterprise AI</span>
+							<span style="background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600;">Anthropic</span>
+							<span style="background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600;">Google Cloud</span>
+							<span style="background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600;">Architecture</span>
+						</div>
+					</div>
+				</div>
+				\`;
+			}
+
 			if (window.marked && window.DOMPurify) {
-				visualCanvas.innerHTML = DOMPurify.sanitize(marked.parse(body));
+				const bodyHtml = DOMPurify.sanitize(marked.parse(body));
+				visualCanvas.innerHTML = headerHtml + bodyHtml;
 			}
 		}
 
