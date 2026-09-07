@@ -12,20 +12,20 @@ Over the past week, I sat for and passed all four official Anthropic certificati
 * **Claude Certified Architect: Foundations (CCAR-F)** — Score: `854 / 1000`
 * **Claude Certified Architect: Professional (CCAR-P)** — Score: `836 / 1000`
 
+Taking the four exams in rapid succession over a single week was an intense sprint, but it provided an interesting comparative lens: seeing how Anthropic structures their mental models progressively—from Level 100 business adoption all the way to Level 400 distributed multi-agent systems.
+
 For the past five months, I have been building with autonomous agentic systems daily. Outside my day job, I run an extensive homelab environment automating my family's digital life and infrastructure workflows. At work, I architect enterprise solutions on Google Cloud using Antigravity and MCP servers; at home, I battle-test tools like Claude Code and Model Context Protocol (MCP) servers in production to manage my firewall, Home Assistant, and reverse proxies—keeping my homelab secure and protecting my kids from excessive screen time.
 
-Taking these exams was not about cramming trivia. It was about pressure-testing hands-on engineering intuition against Anthropic’s formal specifications—and connecting real-world experience to architectural patterns.
+Taking these exams was about pressure-testing hands-on engineering intuition against Anthropic’s formal specifications. Even when you build with LLMs daily, sitting for formal exams is humbling—it forces you into the corners of the documentation you normally gloss over, revealing blind spots and connecting real-world experience to architectural patterns.
 
 ---
 
-## 2. Why a Google Senior Customer Engineer Mastered Anthropic
+## 2. Why an Enterprise Cloud Architect Should Understand Anthropic Firsthand
 
-As I talk to peers and friends about my seven-day journey, they usually ask me why I spent time mastering the entire Anthropic stack, even though I work at Google Cloud as a Senior Customer Engineer.
-
-For me, it comes down to how enterprise architectures work in the real world:
+When peers ask why I invested time exploring the Anthropic stack so thoroughly, it comes down to how enterprise architectures work in the real world:
 
 ### 1. Multi-Model Architecture
-Google’s relationship with Anthropic is multifaceted: we are major partners, investors, cloud infrastructure providers, and competitors in developer tooling. From an enterprise customer perspective, however, real-world architectures are rarely built around a single model. Enterprise systems are hybrid and multi-model.
+Google’s relationship with Anthropic is multifaceted: we are major partners, investors, cloud infrastructure providers, and collaborators across developer ecosystems. From an enterprise customer perspective, however, real-world architectures are rarely built around a single provider. Enterprise systems are hybrid and multi-model.
 
 ### 2. Moving Beyond the False Binary ("Either/Or")
 When customers ask whether they should scrap their Claude implementations for Gemini, the conversation is not about picking one over the other. 
@@ -38,7 +38,7 @@ It is an engineering decision across three core pillars:
 There are workloads where Anthropic’s models and MCP toolchains excel. There are equally massive enterprise workloads where Google’s Gemini models—with [industry-leading 1-million-token context windows](https://ai.google.dev/gemini-api/docs/long-context), native multimodality, sub-second Flash latency, and Gemini Enterprise Agent Platform (GEAP) governance—are the best architectural fit.
 
 ### 3. Educated, Grounded Advisory
-To be a trusted advisor to my customers, I cannot rely on marketing slides. I need to understand the protocol mechanics, failure modes, prompt caching prefix rules, and edge cases firsthand. Mastering the Anthropic stack allows me to have nuanced, practical conversations on how to build resilient systems on Google Cloud that get the best out of every model.
+To be a trusted advisor to my customers, I cannot rely on marketing slides. I need to understand the protocol mechanics, failure modes, prompt caching prefix rules, and edge cases firsthand. Getting my hands dirty across both ecosystems allows me to ground customer conversations in real operational data rather than vendor slides, designing resilient systems that get the best out of every model.
 
 ---
 
