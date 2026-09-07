@@ -32,6 +32,9 @@ const { title, description, pubDate, updatedDate, heroImage, draft, slug } = Ast
 				border-bottom: 1px solid #e2e8f0;
 				text-align: left;
 			}
+			.title + :global(h1) {
+				display: none;
+			}
 			.title h1 {
 				margin: 0 0 1rem 0;
 				font-size: clamp(2rem, 3.5vw, 2.75rem);

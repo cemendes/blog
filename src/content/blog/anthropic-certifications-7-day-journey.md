@@ -4,6 +4,8 @@ description: "Architecture, exam realities, and enterprise multi-model takeaways
 pubDate: "Sep 06 2026"
 ---
 
+# How I Passed All 4 Anthropic Claude Certifications in 7 Days
+
 ## 1. The 7-Day Sprint
 
 Over the past week, I sat for and passed all four official Anthropic certification exams:
