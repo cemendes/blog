@@ -14,7 +14,7 @@ Over the past week, I sat for and passed all four official Anthropic certificati
 
 Four exams in seven days is a grind. But stacking them back-to-back gave me a clean, unfiltered look at how Anthropic builds their mental models—starting with basic executive adoption and climbing all the way up to distributed, autonomous agent swarms.
 
-For the past 1.5 years, I've lived in agentic workflows, and I've spent the last 5 months immersed in Anthropic models and tools like Claude Code. At work, I architect enterprise solutions on Google Cloud using Antigravity, Google Cloud, and third-party MCPs. At home, I run a heavy homelab where I let Claude Code and agentic frameworks like [Hermes](https://hermes-agent.nousresearch.com) tinker with my firewall, manage Home Assistant, tune reverse proxies, track my kids' chores, and grant them screen time across multiple surfaces. (It's a pretty cool and safe setup that I will write a dedicated post on soon).
+For the past 1.5 years, I've lived in agentic workflows, and I've spent the last 5 months immersed in Anthropic models and tools like Claude Code. At work, I architect enterprise solutions on Google Cloud using Antigravity, Google Cloud Agent Platform, first and third-party MCPs. At home, I run a heavy homelab where I let Claude Code and agentic frameworks like [Hermes](https://hermes-agent.nousresearch.com) tinker with my firewall, manage Home Assistant, tune reverse proxies, track my kids' chores, and grant them screen time across multiple surfaces. (It's a pretty cool and safe setup that I will write a dedicated post on soon).
 
 I didn't take these tests to collect digital paper. I took them to pressure-test decades of engineering intuition against Anthropic’s official specs. Even when you write code and prompt models daily, formal exams have a way of humbling you. They force you into obscure documentation corners you'd normally skim, expose blind spots you didn't know you had, and connect everyday trial-and-error to clean architectural patterns.
 
@@ -46,7 +46,7 @@ The alternative is the **Scaffolding method**: start with the Level 100 Associat
 When colleagues and friends ask why I spent a week digging so deep into Anthropic's stack, the answer is simple: real-world production never runs on just one model, the same way that large enterprises don't rely on a single cloud provider.
 
 ### 1. Multi-Model Architecture
-Google and Anthropic have a close, multifaceted relationship: Google is an investor in Anthropic, infrastructure providers (Claude providing foundational model infrastructure, and Google providing cloud infrastructure as well as AI models), and we collaborate closely across developer tooling and AI open-source standards. But sitting with enterprise customers tells a very practical story: almost nobody builds an entire enterprise estate on a single vendor's stack. Modern systems are hybrid and multi-model by design.
+Google and Anthropic have a close, multifaceted relationship: Google is an investor in Anthropic, infrastructure providers (Anthropic providing foundational model infrastructure, and Google providing cloud infrastructure as well as foundational models), and we collaborate closely across developer tooling and AI open-source standards. But sitting with enterprise customers tells a very practical story: almost nobody builds an entire enterprise solution on a single vendor's stack. Modern systems are hybrid and multi-model by design.
 
 ### 2. Moving Beyond the False Binary ("Either/Or")
 Whenever a customer asks whether they should scrap their Claude setups for Gemini, or vice versa, my response is always the same: let's not focus on the technology first—focus on your use case needs and business requirements.
@@ -59,18 +59,18 @@ In the trenches, model selection comes down to three gritty trade-offs:
 Anthropic models and MCP toolchains shine on intricate reasoning, strict schema adherence, and multi-turn agentic loops. Meanwhile, Google's Gemini models—with [native 1-million-token context windows](https://ai.google.dev/gemini-api/docs/long-context), multimodal ingestion, sub-second Flash latency, lower cost per token, and Gemini Enterprise Agent Platform (GEAP) governance—dominate data-heavy enterprise workloads.
 
 ### 3. Educated, Grounded Advisory
-You can't be a trusted advisor if you don't study and get your hands dirty. I want to know what happens when prompt caching invalidates on line 3, how rate limits cascade under sudden load, and where MCP tool calling falls over. Getting my hands dirty across both stacks lets me give customers my unbiased opinion backed by operational telemetry, not marketing copy.
+You can't be a trusted advisor if you don't study and get your hands dirty. I want to know what happens when prompt caching invalidates on line 3, how rate limits cascade under sudden load, and where MCP tool calling falls over. Getting my hands dirty across both stacks lets me give customers my unbiased opinion backed by operational telemetry.
 
 ---
 
 ## 3. How to Register: Costs, Delivery Formats & OnVUE Survival Guide
 
-Anthropic delivers these exams through Pearson VUE and currently offers vouchers through the **Claude Partner Network**.
+Anthropic delivers these exams through Pearson VUE and currently offers vouchers through the **Anthropic Partner Network**.
 
 Here is the breakdown of costs, delivery formats, and the practical test-day checklist:
 
 ### Vouchers vs. Retail Pricing
-* **Partner Network ($0)**: If your organization is a member of the Claude Partner Network, exam vouchers cost **\$0**. Qualifying as a Registered Partner has a remarkably accessible threshold—you don't need dozens of certified consultants or multi-million-dollar commitments; you just need to be actively building, evaluating, or consulting with Claude tools. Apply via the [Anthropic Partner Network Portal](https://www.anthropic.com/partners) using your corporate email.
+* **Partner Network ($0)**: If your organization is a member of the Anthropic Partner Network, exam vouchers cost **\$0**. Qualifying as a Registered Partner has a remarkably accessible threshold—you don't need dozens of certified consultants or multi-million-dollar commitments; you just need to be actively building, evaluating, or consulting with Claude tools. Apply via the [Anthropic Partner Network Portal](https://www.anthropic.com/partners) using your corporate email.
 * **Pricing Values on the Portal**: The [Anthropic Partner Academy portal](https://anthropic-partners.skilljar.com/page/partner-certifications) lists standard retail values for each credential:
   * **Associate (CCAO-F)**: **\$99 USD**
   * **Developer (CCDV-F)**: **\$125 USD**
@@ -82,7 +82,7 @@ Here is the breakdown of costs, delivery formats, and the practical test-day che
 ### Delivery Formats: Remote OnVUE vs. Test Centers
 Anthropic supports both delivery formats: **Online Proctored (Pearson OnVUE)** from your home or office, and **In-Person Test Centers**.
 
-I took all four of my exams remotely via Pearson OnVUE late at night while my family was asleep and the house was quiet. I didn't get much sleep this past week, but having uninterrupted silence was completely non-negotiable.
+I took all four of my exams remotely via Pearson OnVUE late at night while my family was asleep and the house was quiet. I didn't get much sleep this past week, but having uninterrupted silence was non-negotiable.
 
 ### Pearson OnVUE Test-Day Survival Guide
 If you choose to test remotely, Pearson's OnVUE environment has strict, unforgiving rules that catch many first-time candidates off guard:
@@ -90,7 +90,7 @@ If you choose to test remotely, Pearson's OnVUE environment has strict, unforgiv
 1. **Avoid Work Laptops & Run a System Dry-Run**: Do not take the exam on a corporate-managed work computer. Enterprise endpoint monitoring, VPNs, background security software, and strict group policies frequently conflict with Pearson's lockdown browser. Use a personal machine instead, and run the official Pearson OnVUE system test dry-run several days in advance to verify your webcam, microphone, and network compatibility.
 2. **Strict Environment Lockdown**: You must test in a private room with the door closed. No one may enter or speak. Clear your entire desk—no second monitors, smartwatches, phones, books, or stray electronics may be within reach.
 3. **Mobile Check-in & Photo Verification**: When checking in, you'll use your smartphone to capture a headshot photo of yourself, both sides of your government-issued ID, and four wide-angle photos of your testing space (front, back, left, right). Stand outside your chair so the proctor (and Pearson's automated screening system) can verify that your desk and perimeter are clear. Once submitted, immediately place your phone completely across the room out of arm's reach.
-4. **Hydration & Seated Rule**: Place a clear glass of water on your desk or next to you before checking in. Once the exam starts, you will be seated for up to 120 minutes with zero breaks. You cannot stand up, stretch outside camera view, or leave the webcam frame for any reason without having your session revoked.
+4. **Hydration & Seated Rule**: Place a clear glass of water (or coffee, if you aren't testing in the middle of the night like me 😊) on your desk or next to you before checking in. Once the exam starts, you will be seated for up to 120 minutes with zero breaks. You cannot stand up, stretch outside camera view, or leave the webcam frame for any reason without having your session revoked.
 5. **Be Prepared for Proctor Queue Delays**: During peak evening or early morning on weekend testing hours, you may wait in an online check-in queue for 10 to 20 minutes before a live proctor connects, verifies your room, and releases the exam. Stay seated and keep your eyes on the screen.
 6. **No Physical Scratch Paper (Digital Whiteboard Only)**: OnVUE strictly bans physical pens and scratch paper. The testing software provides a built-in digital whiteboard if you need to sketch architectural loops or fan-outs. (I personally didn't need to use it, but it is available).
 7. **Retake Policy & Cooldowns**: If you don't hit the 720 passing mark on your first attempt, Anthropic and [Pearson VUE](https://home.pearsonvue.com) enforce mandatory waiting periods before you can schedule a retake:
