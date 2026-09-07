@@ -2,7 +2,6 @@
 title: "How I Passed All 4 Anthropic Claude Certifications in 7 Days"
 description: "Architecture, exam realities, and enterprise multi-model takeaways from taking and passing all 4 Anthropic certifications in one week."
 pubDate: "Sep 06 2026"
-heroImage: "../../assets/anthropic-certifications-og.jpg"
 ---
 
 ## 1. The 7-Day Sprint
@@ -43,22 +42,37 @@ To be a trusted advisor to my customers, I cannot rely on marketing slides. I ne
 
 ---
 
-## 3. Exam-by-Exam Tactical Deconstruction
+## 3. How to Register: Partner Requirements & Exam Booking Flow
+
+Currently, Anthropic’s official certification exams are gated behind the **Claude Partner Network**.
+
+Here is how eligibility works and the exact steps to book your exam:
+
+### Partner Access & Waived Fees
+* You must be part of an organization registered in the Claude Partner Network to schedule exam vouchers.
+* **100% Waived Exam Fees**: As an active partner, Anthropic covers the full examination cost.
+* **Low Barrier to Entry**: While being behind a partner wall is a hurdle for independent developers, joining as a **Registered Partner** is straightforward. You do not need a massive consulting practice or a 20+ engineer headcount minimum. The baseline requirement is simply that your firm actively builds with, evaluates, or helps deploy Anthropic-based solutions for customers or internal workflows.
+* **Partner Portal**: If your organization is not yet registered, apply through the [Anthropic Partner Network Portal](https://www.anthropic.com/partners) using your corporate domain email.
+
+### Step-by-Step Registration Flow
+1. Navigate to the official partner certification catalog at [anthropic-partners.skilljar.com/page/partner-certifications](https://anthropic-partners.skilljar.com/page/partner-certifications).
+2. Scroll down to the **All Certifications** section and select the track you want to sit for (Associate, Developer, Architect Foundations, or Architect Professional).
+3. Click **Register** on the exam page. The system will display the exam prerequisites and add the exam ticket to your cart.
+4. Proceed to **Checkout** (your partner status will automatically zero out the fee).
+5. Once checkout completes, you will receive an automated confirmation email with your scheduling link and voucher code to book your live proctored session directly on **Pearson VUE**.
+
+---
+
+## 4. Exam-by-Exam Tactical Deconstruction
 
 Every exam has a distinct focus, pacing profile, and target persona:
 
-```
-┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                   ANTHROPIC EXAM COMPARISON MATRIX                               │
-├─────────────────────┬──────────────┬──────────────┬───────────────┬───────────────┬──────────────┤
-│ Exam Track          │ Level (1-4)  │ Questions    │ Time Allowed  │ Time Used     │ Pacing Feel  │
-├─────────────────────┼──────────────┼──────────────┼───────────────┼───────────────┼──────────────┤
-│ 1. CCAO-F Associate │ 100          │ 60 Questions │ 120 Minutes   │ ~60 Minutes   │ Relaxed      │
-│ 2. CCDV-F Developer │ 250–300      │ 53 Questions │ 120 Minutes   │ ~90 Minutes   │ Moderate     │
-│ 3. CCAR-F Arch Fnd  │ 200          │ 60 Questions │ 120 Minutes   │ ~118 Minutes  │ Tight        │
-│ 4. CCAR-P Arch Prof │ 400          │ 63 Questions │ 120 Minutes   │ ~104 Minutes  │ Tight        │
-└─────────────────────┴──────────────┴──────────────┴───────────────┴───────────────┴──────────────┘
-```
+| Exam Track | Level (1-4) | Questions | Time Allowed | Time Used | Pacing Feel |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1. CCAO-F Associate** | 100 | 60 Questions | 120 Minutes | ~60 Minutes | Relaxed |
+| **2. CCDV-F Developer** | 250–300 | 53 Questions | 120 Minutes | ~90 Minutes | Moderate |
+| **3. CCAR-F Arch Fnd** | 200 | 60 Questions | 120 Minutes | ~118 Minutes | Tight |
+| **4. CCAR-P Arch Prof** | 400 | 63 Questions | 120 Minutes | ~104 Minutes | Tight |
 
 > **Note on Technical Levels**: I use the standard [academic and technical course leveling taxonomy (100–400 levels)](https://study.com/college/credit-transfer/college-course-levels-explained-100-200-300-400-levels.html).
 
@@ -108,19 +122,6 @@ Every exam has a distinct focus, pacing profile, and target persona:
   * **Rule of Thumb**: Commit decisively on the first pass; keep flags reserved for true 50/50 dilemmas.
 * **Exam Guide**: [Official CCAR-P Exam Guide (PDF)](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F6nizmqk8tpzpfjvt6qmmav7rh%2Fpublic%2F1783542810%2FClaude+Certified+Architect+%E2%80%93+Professional+Exam+Guide.pdf)
 * **Preparation**: I found the [official CCAR-P prep course](https://anthropic-partners.skilljar.com/path/claude-certified-architect-professional) a bit too dense. The [Udemy CCAR-P Exam Prep Course](https://www.udemy.com/course/ccar-p-exam-prep/) was much better structured for video learning, covering observability, evals, and agent-to-agent architectures.
-
----
-
-## 4. How to Register: The Partner Requirement
-
-Currently, Anthropic’s official certification exams are gated behind the **Claude Partner Network**.
-
-Here is what you need to know about eligibility and registration:
-
-* **Partner Access & Waived Fees**: You must be part of an organization registered in the Claude Partner Network to schedule exam vouchers via Pearson VUE. The big upside is that once your organization is an active partner, Anthropic covers and waives the exam fees.
-* **Low Barrier to Entry**: While being behind a partner wall is a hurdle for independent developers, the requirements to join as a **Registered Partner** are accessible. You do not need a massive consulting firm or a minimum headcount of 20+ engineers. 
-* **Core Criteria**: The baseline expectation is that your organization is actively evaluating, building with, or deploying Anthropic-based solutions for customers or internal production workflows.
-* **Official Partner Portal**: Organizations can apply directly through the [Anthropic Partner Network Portal](https://www.anthropic.com/partners) using their corporate domain email.
 
 ---
 
