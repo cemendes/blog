@@ -110,7 +110,20 @@ Every exam has a distinct focus, pacing profile, and target persona:
 
 ---
 
-## 4. Enterprise Architecture Takeaways
+## 4. How to Register: The Partner Requirement
+
+Currently, Anthropic’s official certification exams are gated behind the **Claude Partner Network**.
+
+Here is what you need to know about eligibility and registration:
+
+* **Partner Access & Waived Fees**: You must be part of an organization registered in the Claude Partner Network to schedule exam vouchers via Pearson VUE. The big upside is that once your organization is an active partner, Anthropic covers and waives the exam fees.
+* **Low Barrier to Entry**: While being behind a partner wall is a hurdle for independent developers, the requirements to join as a **Registered Partner** are accessible. You do not need a massive consulting firm or a minimum headcount of 20+ engineers. 
+* **Core Criteria**: The baseline expectation is that your organization is actively evaluating, building with, or deploying Anthropic-based solutions for customers or internal production workflows.
+* **Official Partner Portal**: Organizations can apply directly through the [Anthropic Partner Network Portal](https://www.anthropic.com/partners) using their corporate domain email.
+
+---
+
+## 5. Enterprise Architecture Takeaways
 
 1. **Start Deterministic, Add Autonomy Only When Needed**  
    Autonomous swarms without cycle detection and bounded recursion can introduce unnecessary operational complexity. Many enterprise problems are solved more reliably, with lower latency and cost, using deterministic **Prompt Chaining** or **Routing** with strict validation gates.
@@ -126,7 +139,7 @@ Every exam has a distinct focus, pacing profile, and target persona:
 
 ---
 
-## 5. Open-Source Resources & Verified Badges
+## 6. Open-Source Resources & Verified Badges
 
 To help engineers prepare with practical, code-grounded materials, I open-sourced our entire study repository and practice engine:
 
