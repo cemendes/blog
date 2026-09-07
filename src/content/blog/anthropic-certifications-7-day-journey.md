@@ -8,8 +8,8 @@ pubDate: "Sep 06 2026"
 
 Over the past week, I sat for and passed all four official Anthropic certification exams:
 * **Claude Certified Associate: Foundations (CCAO-F)** — Score: `967 / 1000`
-* **Claude Certified Architect: Foundations (CCAR-F)** — Score: `854 / 1000`
 * **Claude Certified Developer: Foundations (CCDV-F)** — Score: `955 / 1000`
+* **Claude Certified Architect: Foundations (CCAR-F)** — Score: `854 / 1000`
 * **Claude Certified Architect: Professional (CCAR-P)** — Score: `836 / 1000`
 
 For the past five months, I have been building with autonomous agentic systems daily. Outside my day job, I run an extensive homelab environment automating my family's digital life and infrastructure workflows. At work, I architect enterprise solutions on Google Cloud using Antigravity and MCP servers; at home, I battle-test tools like Claude Code and Model Context Protocol (MCP) servers in production to manage my firewall, Home Assistant, and reverse proxies—keeping my homelab secure and protecting my kids from excessive screen time.
@@ -46,28 +46,48 @@ To be a trusted advisor to my customers, I cannot rely on marketing slides. I ne
 
 Every exam has a distinct focus, pacing profile, and target persona:
 
-| Exam Track | Level | Questions | Time Allowed | Time Used | Pacing Feel |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **1. CCAO-F Associate** | Level 100 | 60 Questions | 120 Minutes | ~60 Minutes | Relaxed |
-| **2. CCAR-F Arch Fnd** | Level 200 | 60 Questions | 120 Minutes | ~118 Minutes | Tight |
-| **3. CCDV-F Developer** | Level 250 | 53 Questions | 120 Minutes | ~90 Minutes | Moderate |
-| **4. CCAR-P Arch Prof** | Level 400 | 63 Questions | 120 Minutes | ~104 Minutes | Tight |
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                   ANTHROPIC EXAM COMPARISON MATRIX                               │
+├─────────────────────┬──────────────┬──────────────┬───────────────┬───────────────┬──────────────┤
+│ Exam Track          │ Level (1-4)  │ Questions    │ Time Allowed  │ Time Used     │ Pacing Feel  │
+├─────────────────────┼──────────────┼──────────────┼───────────────┼───────────────┼──────────────┤
+│ 1. CCAO-F Associate │ 100          │ 60 Questions │ 120 Minutes   │ ~60 Minutes   │ Relaxed      │
+│ 2. CCDV-F Developer │ 250–300      │ 53 Questions │ 120 Minutes   │ ~90 Minutes   │ Moderate     │
+│ 3. CCAR-F Arch Fnd  │ 200          │ 60 Questions │ 120 Minutes   │ ~118 Minutes  │ Tight        │
+│ 4. CCAR-P Arch Prof │ 400          │ 63 Questions │ 120 Minutes   │ ~104 Minutes  │ Tight        │
+└─────────────────────┴──────────────┴──────────────┴───────────────┴───────────────┴──────────────┘
+```
 
 > **Note on Technical Levels**: I use the standard [academic and technical course leveling taxonomy (100–400 levels)](https://study.com/college/credit-transfer/college-course-levels-explained-100-200-300-400-levels.html).
 
 ---
 
 ### 1. Claude Certified Associate: Foundations (CCAO-F — Score: 967 / 1000)
-* **Level**: **Level 100**. Targeted at business leaders, managers, and enterprise decision-makers needing foundational AI fluency.
+* **Level**: **100**. Targeted at business leaders, managers, and enterprise decision-makers needing foundational AI fluency.
 * **Scope**: Workplace AI adoption, privacy boundaries (confirming zero training on commercial/team data), prompting basics, Projects knowledge bases, and Claude Artifacts lifecycle rules.
-* **Pacing**: 60 questions with 120 minutes allowed. I completed the exam in approximately 60 minutes. Questions are direct, and wrong answers are easy to spot.
+* **Pacing**: 60 questions with 120 minutes allowed.
+  * I completed the exam in approximately 60 minutes. Questions are direct, and wrong answers are easy to spot.
 * **Exam Guide**: [Official CCAO-F Exam Guide (PDF)](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F6nizmqk8tpzpfjvt6qmmav7rh%2Fpublic%2F1783542847%2FClaude+Certified+Associate+%E2%80%93+Foundations+Exam+Guide.pdf)
 * **Preparation**: The [official CCAO-F prep course](https://anthropic-partners.skilljar.com/path/claude-certified-associate-foundations) is more than enough.
 
 ---
 
-### 2. Claude Certified Architect: Foundations (CCAR-F — Score: 854 / 1000)
-* **Level**: **Level 200**. Targeted at enterprise solutions architects and system engineers.
+### 2. Claude Certified Developer: Foundations (CCDV-F — Score: 955 / 1000)
+* **Level**: **250–300**. Targeted at software engineers and backend developers building production applications with the Claude API.
+* **Scope**:
+  * **Structured Outputs & Prefilling**: Assistant prefilling (`{` or `[`) to enforce clean JSON without markdown fences, and configuring `tool_choice` modes (`auto`, `any`, `tool`).
+  * **Error Treatment & Resiliency**: Formatting `tool_result` with `is_error: true` for autonomous agent recovery, and implementing exponential backoff with jitter on HTTP `429` (Rate Limit) and `529` (Overloaded).
+  * **Model Archetypes**: Questions refer to model capability archetypes (*"workhorse model"* vs. *"flagship reasoning model"*) to evaluate cost-latency-intelligence trade-offs.
+* **Pacing**: 53 questions with 120 minutes allowed.
+  * Finished in approximately 90 minutes. Code snippets require careful syntax verification.
+* **Exam Guide**: [Official CCDV-F Exam Guide (PDF)](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F6nizmqk8tpzpfjvt6qmmav7rh%2Fpublic%2F1783542875%2FClaude+Certified+Developer+%E2%80%93+Foundations+Exam+Guide.pdf)
+* **Preparation**: Hands-on experience with Claude Code plus the [official CCDV-F prep course](https://anthropic-partners.skilljar.com/path/claude-certified-developer-foundations).
+
+---
+
+### 3. Claude Certified Architect: Foundations (CCAR-F — Score: 854 / 1000)
+* **Level**: **200**. Targeted at enterprise solutions architects and system engineers.
 * **Scope**: Anthropic’s 5 Workflow Patterns (Prompt Chaining, Routing, Parallelization, Orchestrator-Workers, Evaluator-Optimizer), Messages API loop mechanics (`stop_reason: "tool_use"` and matching `tool_use_id`), and Prompt Caching exact-prefix invalidation rules.
 * **Pacing**:
   * 60 questions with 120 minutes allowed (2 minutes per question). The only exam featuring a **split-screen layout roughly every 10 questions** with detailed enterprise scenarios on the left panel (4 scenarios drawn from a bank of 6).
@@ -78,20 +98,8 @@ Every exam has a distinct focus, pacing profile, and target persona:
 
 ---
 
-### 3. Claude Certified Developer: Foundations (CCDV-F — Score: 955 / 1000)
-* **Level**: **Level 250–300**. Targeted at software engineers and backend developers building production applications with the Claude API.
-* **Scope**:
-  * **Structured Outputs & Prefilling**: Assistant prefilling (`{` or `[`) to enforce clean JSON without markdown fences, and configuring `tool_choice` modes (`auto`, `any`, `tool`).
-  * **Error Treatment & Resiliency**: Formatting `tool_result` with `is_error: true` for autonomous agent recovery, and implementing exponential backoff with jitter on HTTP `429` (Rate Limit) and `529` (Overloaded).
-  * **Model Archetypes**: Questions refer to model capability archetypes (*"workhorse model"* vs. *"flagship reasoning model"*) to evaluate cost-latency-intelligence trade-offs.
-* **Pacing**: 53 questions with 120 minutes allowed. Finished in approximately 90 minutes. Code snippets require careful syntax verification.
-* **Exam Guide**: [Official CCDV-F Exam Guide (PDF)](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2F6nizmqk8tpzpfjvt6qmmav7rh%2Fpublic%2F1783542875%2FClaude+Certified+Developer+%E2%80%93+Foundations+Exam+Guide.pdf)
-* **Preparation**: Hands-on experience with Claude Code plus the [official CCDV-F prep course](https://anthropic-partners.skilljar.com/path/claude-certified-developer-foundations).
-
----
-
 ### 4. Claude Certified Architect: Professional (CCAR-P — Score: 836 / 1000)
-* **Level**: **Level 400**. Targeted at Enterprise Architects designing resilient, multi-agent enterprise deployments.
+* **Level**: **400**. Targeted at Enterprise Architects designing resilient, multi-agent enterprise deployments.
 * **Scope**: Enterprise multi-agent swarms, Evals-as-Code (LLM-as-a-judge), A/B testing pipelines, retrieval indexing and re-ranking, remote MCP over HTTP with OAuth 2.0 / mTLS, Zero Data Retention (ZDR), customer-managed encryption (CMEK), and OpenTelemetry distributed observability.
 * **Pacing**:
   * 63 questions with 120 minutes allowed. Questions are concise, but **answer choices are packed with razor-thin nuance** where 2–3 options appear plausible. Includes **Tri-Category Classification** sorting questions.
