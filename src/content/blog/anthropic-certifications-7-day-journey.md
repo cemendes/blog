@@ -2,6 +2,7 @@
 title: "How I Passed All 4 Anthropic Claude Certifications in 7 Days"
 description: "Architecture, exam realities, and enterprise multi-model takeaways from taking and passing all 4 Anthropic certifications in one week."
 pubDate: "Sep 06 2026"
+heroImage: "../../assets/anthropic-certifications-og.jpg"
 ---
 
 ## 1. The 7-Day Sprint
