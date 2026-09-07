@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
@@ -16,41 +15,76 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 		<style>
 			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
+				width: 840px;
 				max-width: calc(100% - 2em);
 				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+				padding: 2em 0;
+			}
+			.prose {
+				width: 100%;
+				color: #1e293b;
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
+				margin-bottom: 2.5rem;
+				padding: 0 0 2rem 0;
+				border-bottom: 1px solid #e2e8f0;
+				text-align: left;
 			}
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				margin: 0 0 1rem 0;
+				font-size: clamp(2rem, 3.5vw, 2.75rem);
+				line-height: 1.25;
+				color: #0f172a;
+				font-weight: 800;
+				letter-spacing: -0.02em;
 			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+			.byline {
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+				margin-top: 1.25rem;
+			}
+			.author-info {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				gap: 0.5rem;
+			}
+			.author-name {
+				font-weight: 700;
+				color: #0f172a;
+				font-size: 1.05rem;
+			}
+			.author-title {
+				color: #64748b;
+				font-size: 0.95rem;
+			}
+			.meta-row {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 0.6rem;
+				font-size: 0.88rem;
+				color: #64748b;
 			}
 			.last-updated-on {
 				font-style: italic;
+			}
+			.badge-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+				margin-top: 0.25rem;
+			}
+			.badge {
+				display: inline-block;
+				background: #f1f5f9;
+				color: #334155;
+				padding: 3px 10px;
+				border-radius: 9999px;
+				font-size: 0.75rem;
+				font-weight: 600;
+				letter-spacing: 0.03em;
 			}
 		</style>
 	</head>
@@ -59,23 +93,36 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
 				<div class="prose">
 					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
 						<h1>{title}</h1>
-						<hr />
+						<div class="byline">
+							<div class="author-info">
+								<span class="author-name">Eduardo Oliveira</span>
+								<span class="author-title">— Senior Customer Engineer @ Google Cloud</span>
+							</div>
+							<div class="meta-row">
+								<span><FormattedDate date={pubDate} /></span>
+								<span>•</span>
+								<span>8 min read</span>
+								{
+									updatedDate && (
+										<>
+											<span>•</span>
+											<span class="last-updated-on">
+												Updated on <FormattedDate date={updatedDate} />
+											</span>
+										</>
+									)
+								}
+							</div>
+							<div class="badge-list">
+								<span class="badge">Enterprise AI</span>
+								<span class="badge">Anthropic</span>
+								<span class="badge">Google Cloud</span>
+								<span class="badge">Architecture</span>
+							</div>
+						</div>
 					</div>
 					<slot />
 				</div>
