@@ -2,12 +2,6 @@
 title: "How I Passed All 4 Anthropic Claude Certifications in 7 Days"
 description: "Architecture, exam realities, and enterprise multi-model takeaways from taking and passing all 4 Anthropic certifications in one week."
 pubDate: "Sep 06 2026"
-heroImage: "../../assets/blog-placeholder-1.jpg"
----
-
-**By Eduardo Oliveira**  
-*Senior Customer Engineer @ Google Cloud*
-
 ---
 
 ## 1. The 7-Day Sprint
@@ -52,18 +46,12 @@ To be a trusted advisor to my customers, I cannot rely on marketing slides. I ne
 
 Every exam has a distinct focus, pacing profile, and target persona:
 
-```
-┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                   ANTHROPIC EXAM COMPARISON MATRIX                               │
-├─────────────────────┬──────────────┬──────────────┬───────────────┬───────────────┬──────────────┤
-│ Exam Track          │ Level (1-4)  │ Questions    │ Time Allowed  │ Time Used     │ Pacing Feel  │
-├─────────────────────┼──────────────┼──────────────┼───────────────┼───────────────┼──────────────┤
-│ 1. CCAO-F Associate │ Level 100    │ 60 Questions │ 120 Minutes   │ ~60 Minutes   │ Relaxed      │
-│ 2. CCAR-F Arch Fnd  │ Level 200    │ 60 Questions │ 120 Minutes   │ ~118 Minutes  │ Tight        │
-│ 3. CCDV-F Developer │ Level 250    │ 53 Questions │ 120 Minutes   │ ~90 Minutes   │ Moderate     │
-│ 4. CCAR-P Arch Prof │ Level 400    │ 63 Questions │ 120 Minutes   │ ~104 Minutes  │ Tight        │
-└─────────────────────┴──────────────┴──────────────┴───────────────┴───────────────┴──────────────┘
-```
+| Exam Track | Level | Questions | Time Allowed | Time Used | Pacing Feel |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **1. CCAO-F Associate** | Level 100 | 60 Questions | 120 Minutes | ~60 Minutes | Relaxed |
+| **2. CCAR-F Arch Fnd** | Level 200 | 60 Questions | 120 Minutes | ~118 Minutes | Tight |
+| **3. CCDV-F Developer** | Level 250 | 53 Questions | 120 Minutes | ~90 Minutes | Moderate |
+| **4. CCAR-P Arch Prof** | Level 400 | 63 Questions | 120 Minutes | ~104 Minutes | Tight |
 
 > **Note on Technical Levels**: I use the standard [academic and technical course leveling taxonomy (100–400 levels)](https://study.com/college/credit-transfer/college-course-levels-explained-100-200-300-400-levels.html).
 
