@@ -156,6 +156,30 @@ export function astroLiveEditor(): AstroIntegration {
 		.preview-content pre { background: #0f172a; color: #f8fafc; padding: 1.25em 1.5em; border-radius: 8px; overflow-x: auto; }
 		.preview-content pre code { background: transparent; padding: 0; color: inherit; }
 		.preview-content blockquote { border-left: 4px solid #2337ff; background: #f8fafc; padding: 0.75rem 1.25rem; margin: 1.25rem 0; border-radius: 0 8px 8px 0; }
+		.badge-ai {
+			background: #f0fdf4;
+			color: #166534;
+			border: 1px solid #bbf7d0;
+			font-size: 0.75rem;
+			font-weight: 600;
+			padding: 2px 8px;
+			border-radius: 9999px;
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+		}
+		.ai-editorial-note {
+			margin-top: 3.5rem;
+			padding: 1.25rem 1.5rem;
+			background-color: #f8fafc;
+			border-left: 3px solid #cbd5e1;
+			border-radius: 0 8px 8px 0;
+			font-size: 0.9rem;
+			line-height: 1.6;
+			color: #475569;
+		}
+		.ai-editorial-note p { margin: 0; }
+		.ai-editorial-note strong { color: #0f172a; }
 	</style>
 </head>
 <body>
@@ -252,6 +276,8 @@ export function astroLiveEditor(): AstroIntegration {
 							<span>•</span>
 							<span>8 min read</span>
 							\${meta.draft ? '<span style="background: #fef3c7; color: #b45309; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; border: 1px solid #fcd34d;">Draft</span>' : ''}
+							<span>•</span>
+							<span class="badge-ai" title="Human-authored, AI-edited">✍️ Human-authored • AI-edited</span>
 						</div>
 						<div style="display: flex; gap: 0.4rem; margin-top: 0.25rem;">
 							<span style="background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600;">Enterprise AI</span>
@@ -266,7 +292,14 @@ export function astroLiveEditor(): AstroIntegration {
 
 			if (window.marked && window.DOMPurify) {
 				const bodyHtml = DOMPurify.sanitize(marked.parse(body));
-				visualCanvas.innerHTML = headerHtml + bodyHtml;
+				const noteHtml = \`
+				<aside class="ai-editorial-note">
+					<p>
+						<strong>Transparency Note:</strong> The ideas, technical analysis, and exam experiences shared here are entirely my own. I use AI as an editorial sounding board to polish prose, catch typos, and refine readability, but all content is human-conceived and verified.
+					</p>
+				</aside>
+				\`;
+				visualCanvas.innerHTML = headerHtml + bodyHtml + noteHtml;
 			}
 		}
 
