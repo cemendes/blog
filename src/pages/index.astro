@@ -1,42 +1,125 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (
+	await getCollection('blog', ({ data }) => {
+		return import.meta.env.DEV || !data.draft;
+	})
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 3.5em 1em;
+			}
+			.tagline {
+				font-size: 1.15rem;
+				line-height: 1.6;
+				color: #475569;
+				margin: 0 0 3.5rem 0;
+			}
+			.section-label {
+				font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+				font-size: 0.75rem;
+				font-weight: 600;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #94a3b8;
+				padding-bottom: 0.75rem;
+				border-bottom: 1px solid #e2e8f0;
+				margin-bottom: 2.5rem;
+			}
+			.post-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 2.5rem;
+			}
+			.post-item {
+				display: flex;
+				flex-direction: column;
+				gap: 0.35rem;
+			}
+			.post-date {
+				font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+				font-size: 0.82rem;
+				color: #64748b;
+				letter-spacing: -0.01em;
+			}
+			.post-title {
+				margin: 0;
+				font-size: 1.35rem;
+				font-weight: 700;
+				line-height: 1.35;
+				letter-spacing: -0.015em;
+			}
+			.post-title a {
+				color: #0f172a;
+				text-decoration: none;
+				transition: color 0.15s ease;
+			}
+			.post-title a:hover {
+				color: var(--accent);
+			}
+			.post-description {
+				margin: 0.25rem 0 0 0;
+				font-size: 0.98rem;
+				line-height: 1.6;
+				color: #475569;
+			}
+			@media (max-width: 720px) {
+				main {
+					padding: 2em 1em;
+				}
+				.tagline {
+					margin-bottom: 2.5rem;
+					font-size: 1.05rem;
+				}
+				.post-list {
+					gap: 2rem;
+				}
+				.post-title {
+					font-size: 1.2rem;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>👋 Hello, I'm Eduardo Oliveira</h1>
-			<p>
-				I am a <strong>Senior Customer Engineer at Google Cloud</strong> based in Austin, Texas.
-				I specialize in enterprise Generative AI architecture, multi-model orchestration (Gemini, Vertex AI, Claude, and Model Context Protocol), and autonomous agent systems.
-			</p>
-			<p>
-				Outside of work, I run a sophisticated multi-node homelab environment automating my family's digital life and infrastructure workflows.
-				I write about real-world AI engineering, architectural trade-offs, certification deep dives, and production lessons.
-			</p>
-			<hr />
-			<h2>Latest Articles</h2>
-			<p>
-				Explore in-depth technical breakdowns and field notes:
-			</p>
-			<ul>
-				<li>
-					<a href="/blog/anthropic-certifications-7-day-journey/">
-						<strong>How I Passed All 4 Anthropic Claude Certifications in 7 Days</strong>
-					</a> — <em>Architecture, Exam Realities, and Enterprise Takeaways</em>
-				</li>
+			<p class="tagline">I write about agentic AI, cloud infrastructure, and cybersecurity.</p>
+			<div class="section-label">Writing</div>
+			<ul class="post-list">
+				{
+					posts.map((post) => (
+						<li class="post-item">
+							<div class="post-date">
+								<FormattedDate date={post.data.pubDate} />
+							</div>
+							<h3 class="post-title">
+								<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+							</h3>
+							{post.data.description && (
+								<p class="post-description">{post.data.description}</p>
+							)}
+						</li>
+					))
+				}
 			</ul>
-			<p>
-				👉 Browse all posts in the <a href="/blog">Blog Archive</a>, or read more <a href="/about">About Me</a>.
-			</p>
 		</main>
 		<Footer />
 	</body>

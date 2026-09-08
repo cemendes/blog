@@ -8,6 +8,9 @@ import { astroLiveEditor } from './astro-editor-plugin';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://blog.favela.sh',
+	redirects: {
+		'/blog': '/',
+	},
 	integrations: [mdx(), sitemap(), astroLiveEditor()],
 	fonts: [
 		{

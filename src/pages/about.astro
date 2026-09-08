@@ -1,36 +1,72 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE, SOCIAL_GITHUB, SOCIAL_LINKEDIN, SOCIAL_X, SOCIAL_CREDLY } from '../consts';
 ---
 
-<Layout
-	title="About Eduardo Oliveira"
-	description="Senior Customer Engineer at Google Cloud, AI Architect, and Homelab Tinkerer."
-	pubDate={new Date('September 06 2026')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		I am a <strong>Senior Customer Engineer at Google Cloud</strong> based in Austin, Texas.
-		My professional focus centers on enterprise artificial intelligence, modern application architecture, and multi-model agentic workflows.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`About | ${SITE_TITLE}`}
+			description="Senior Engineer focused on the intersection of agentic AI, cloud infrastructure, and cybersecurity."
+		/>
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 3.5em 1em;
+			}
+			h1 {
+				font-size: 2.25rem;
+				font-weight: 800;
+				letter-spacing: -0.025em;
+				color: #0f172a;
+				margin-bottom: 2rem;
+			}
+			h2 {
+				font-size: 1.5rem;
+				font-weight: 700;
+				letter-spacing: -0.015em;
+				color: #0f172a;
+				margin-top: 2.5rem;
+				margin-bottom: 1rem;
+			}
+			p {
+				font-size: 1.05rem;
+				line-height: 1.75;
+				color: #334155;
+				margin-bottom: 1.5rem;
+			}
+			@media (max-width: 720px) {
+				main {
+					padding: 2em 1em;
+				}
+				h1 {
+					font-size: 1.85rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About</h1>
+			<p>
+				Senior Engineer with nearly 30 years of experience across globally distributed, cross-functional teams. I hold a Master's degree in Cybersecurity and Information Assurance, and my focus sits at the intersection of agentic AI, cloud infrastructure, and cybersecurity—helping enterprises design, secure, and operationalize autonomous AI systems that deliver real business value. Fluent in English, Portuguese, and Spanish.
+			</p>
 
-	<h2>Enterprise AI & Multi-Model Architecture</h2>
-	<p>
-		In enterprise computing, no single model solves every business challenge. I work daily with Fortune 500 customers to design and build production AI systems that balance:
-	</p>
-	<ul>
-		<li><strong>Latency & Throughput</strong>: Choosing the right model tier for real-time customer interactions.</li>
-		<li><strong>Cost & Token Economics</strong>: Leveraging prompt caching, prefix optimization, and compact system designs.</li>
-		<li><strong>Modality & Context Fit</strong>: Harnessing Google's massive context windows and multimodal Gemini models alongside specialized tool-calling models like Claude over Model Context Protocol (MCP).</li>
-	</ul>
+			<p>
+				Outside of work, I run a multi-node homelab spanning virtualization, firewalls, network-attached storage, and home automation. I operate autonomous AI agent swarms for household and infrastructure automation, and test agentic architectures, protocol standards, and zero-trust networking under real operational conditions.
+			</p>
 
-	<h2>Homelab & Production Engineering</h2>
-	<p>
-		I strongly believe that the best architects are active builders. Outside of client advisory, I maintain an enterprise-grade multi-host homelab (running Proxmox VE, OPNsense firewalls, TrueNAS, Home Assistant, and autonomous agent supervisors) where I test new architectures, protocol standards, and automation pipelines under real operational conditions.
-	</p>
-
-	<h2>Connect</h2>
-	<p>
-		You can find my open-source projects on <a href="https://github.com/cemendes" target="_blank" rel="noreferrer">GitHub</a>, verified credentials on <a href="https://www.credly.com/users/carlos-oliveira.7e7371ae/badges" target="_blank" rel="noreferrer">Credly</a>, or subscribe via <a href="/rss.xml">RSS</a>.
-	</p>
-</Layout>
+			<h2>Connect</h2>
+			<p>
+				You can find my open-source projects on <a href={SOCIAL_GITHUB} target="_blank" rel="noreferrer">GitHub</a>, professional background on <a href={SOCIAL_LINKEDIN} target="_blank" rel="noreferrer">LinkedIn</a>, occasional thoughts on <a href={SOCIAL_X} target="_blank" rel="noreferrer">X</a>, and verified credentials on <a href={SOCIAL_CREDLY} target="_blank" rel="noreferrer">Credly</a>.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

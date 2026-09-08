@@ -32,15 +32,6 @@ const { title, description, pubDate, updatedDate, heroImage, draft, slug } = Ast
 				border-bottom: 1px solid #e2e8f0;
 				text-align: left;
 			}
-			:global(.prose:has(.blog-header) > .title) {
-				display: none;
-			}
-			:global(.site-header), :global(.blog-footer) {
-				display: none;
-			}
-			:global(aside.ai-editorial-note ~ aside.ai-editorial-note) {
-				display: none;
-			}
 			.title h1 {
 				margin: 0 0 1rem 0;
 				font-size: clamp(2rem, 3.5vw, 2.75rem);
@@ -215,6 +206,11 @@ const { title, description, pubDate, updatedDate, heroImage, draft, slug } = Ast
 						</div>
 					</div>
 					<slot />
+					<aside class="ai-editorial-note">
+						<p>
+							<strong>Transparency Note:</strong> The ideas, technical analysis, and exam experiences shared here are entirely my own. I use AI as an editorial sounding board to polish prose, catch typos, and refine readability, but all content is human-conceived and verified.
+						</p>
+					</aside>
 				</div>
 			</article>
 		</main>
